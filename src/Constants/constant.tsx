@@ -1,0 +1,118 @@
+import { Typography } from "@mui/material";
+import BookmarkIcon from "../Components/Images/icons8-bookmark-50.png";
+import PageIcon from "../Components/Images/icons8-page-50.png";
+import ChallengeIcon from "../Components/Images/icons8-war-62.png";
+import CommentIcon from "../Components/Images/icons8-comment-100.png";
+import QuestionMark from "../Components/Images/icons8-question-50.png";
+import WallClock from "../Components/Images/icons8-clock-64.png";
+import MultiPage from "../Components/Images/icons8-multi-pages-50.png";
+
+export const QuizHeading = "The Daily MS Excel Quiz";
+
+export const QuizIncludesPoints = [
+  <Typography>
+    <img
+      src={PageIcon}
+      alt="single-page-icon"
+      style={{ maxWidth: "2vw", maxHeight: "2vh", margin: "3px" }}
+    />
+    50% Passing Percentage
+  </Typography>,
+  <Typography>
+    <img
+      src={QuestionMark}
+      alt="question-mark-icon"
+      style={{ maxWidth: "2vw", maxHeight: "2vh", margin: "3px" }}
+    />
+    5 Questions
+  </Typography>,
+  <Typography>
+    <img
+      src={WallClock}
+      alt="clock-icon"
+      style={{ maxWidth: "2vw", maxHeight: "2vh", margin: "3px" }}
+    />
+    10 Minutes
+  </Typography>,
+  <Typography>
+    <img
+      src={MultiPage}
+      alt="multi-page-icon"
+      style={{ maxWidth: "2vw", maxHeight: "2vh", margin: "3px" }}
+    />
+    1 Attempt Daily
+  </Typography>,
+];
+
+export const QuizDiscription = `
+The Microsoft Excel Proficency Test is designed to evaluate an individual's knowledge 
+and skills in using Microsoft Excel. 
+It covers a wide range of topics, including da...`;
+
+export const QuizInteraction = [
+  <Typography>
+    <img
+      src={CommentIcon}
+      alt="comment-icon"
+      style={{ maxWidth: "2vw", maxHeight: "2vh", margin: "3px" }}
+    />
+    Leave a Comment
+  </Typography>,
+  <Typography>
+    <img
+      src={BookmarkIcon}
+      alt="bookmark-icon"
+      style={{ maxWidth: "2vw", maxHeight: "2vh", margin: "3px" }}
+    />
+    Save Quiz
+  </Typography>,
+  <Typography>
+    <img
+      src={ChallengeIcon}
+      alt="challenge-icon"
+      style={{ maxWidth: "2vw", maxHeight: "2vh", margin: "3px" }}
+    />
+    Challenge Quiz
+  </Typography>,
+];
+
+export const QuizQuestions = [
+  {
+    question:
+      "What is the function used to lookup a value in a table and return a corresponding value from the same row?",
+    options: { A: "MATCH", B: "INDEX", C: "HLOOKUP", D: "VLOOKUP" },
+    answer: "MATCH",
+  },
+  {
+    question: "Which formula is NOT equivalent to all of the others?",
+    options: {
+      A: "=SUM (A3,A6)",
+      B: "=A3+A4+A5+A6",
+      C: "=SUM(A3:A6)",
+      D: "=SUM(A3,A4,A5,A6)",
+    },
+    answer: "=A3+A4+A5+A6",
+  },
+  {
+    question:
+      "A cell contains the value 7.877 and you want it to display as 7.9. How can you accomplish this?",
+    options: {
+      A: "Click the Decrease Decimal button once",
+      B: "In the cells group on the Home tab, click Format > Format Cells. Then click the Allignment tab aand the select Right Indent.",
+      C: "Click the Decrease Decimal button twice.",
+      D: "Use the ROUND{} function",
+    },
+    answer: "Click the Decrease Decimal button once",
+  },
+  {
+    question: "Interaction of a column and row iss called __________ .",
+    options: { A: "WorkSheet", B: "Cell", C: "Ribbon", D: "Table" },
+    answer: "WorkSheet",
+  },
+  {
+    question:
+      "The NOW() function return the current date and time as 43704.665218. Which part of this value indicates the time?",
+    options: { A: "665218", B: "6652", C: "43740", D: "43740.66522" },
+    answer: "665218",
+  },
+];
