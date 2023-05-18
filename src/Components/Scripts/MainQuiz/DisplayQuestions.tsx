@@ -1,10 +1,15 @@
-import React from 'react'
+import { Box, Typography } from '@mui/material'
+import React, { FC } from 'react'
 
-const DisplayQuestions = () => {
+type DisQues = {
+  question: string
+}
+
+const DisplayQuestions: FC<DisQues> = (props): JSX.Element => {
   return (
-    <div>
-      
-    </div>
+    <Box>
+      <Typography variant='subtitle2'>{props.question}</Typography>
+    </Box>
   )
 }
 
