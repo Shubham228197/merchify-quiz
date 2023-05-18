@@ -10,39 +10,42 @@ import DisplayQuestions from "./DisplayQuestions";
 import { QuizQuestions } from "../../../Constants/constant";
 import Quizbar from "./Quizbar";
 import { useEffect, useRef, useState } from "react";
+import DisplayResults from "../ResultQuiz/DisplayResults";
 
 const QuizDisplay = () => {
   const [questionNumber, setQuestionNumber] = useState(0);
   const [correctAnswers, SetCorrectAnswer] = useState(0);
   const [incorrectAnswers, SetIncorrectAnswer] = useState(0);
   const [value, setValue] = useState("");
-  const [seconds, setSeconds] = useState(0);
-  const intervalRef = useRef<NodeJS.Timer | null>(null);
+  // const [seconds, setSeconds] = useState(0);
+  // const intervalRef = useRef<NodeJS.Timer | null>(null);
+  // const [TotalTimeTaken, setTotalTimeTaken] = useState(0)
 
-  const startTimer = () => {
-    if (intervalRef.current) return;
+  // const startTimer = () => {
+  //   if (intervalRef.current) return;
 
-    intervalRef.current = setInterval(() => {
-      setSeconds((prev) => prev + 1);
-    }, 1000);
-  };
+  //   intervalRef.current = setInterval(() => {
+  //     setSeconds((prev) => prev + 1);
+  //   }, 1000);
+  // };
 
-  useEffect(() => {
-    startTimer();
-    setInterval(() => {
-      setQuestionNumber(questionNumber + 1);
-      resetTimer();
-    }, 10000);
-  }, [questionNumber]);
+  // useEffect(() => {
+  //   startTimer();
+  //   setInterval(() => {
+  //     setQuestionNumber(questionNumber + 1);
+  //     resetTimer();
+  //     setTotalTimeTaken((prev)=> prev+seconds)
+  //   }, 10000);  
+  // }, [questionNumber]);
 
-  const resetTimer = () => {
-    clearInterval(intervalRef.current!);
-    intervalRef.current = null;
-    setSeconds(0);
-  };
+  // const resetTimer = () => {
+  //   clearInterval(intervalRef.current!);
+  //   intervalRef.current = null;
+  //   setSeconds(0);
+  // };
 
   const handleQuestionNumber = () => {
-    resetTimer();
+    // resetTimer();
     if (value !== "") {
       if (value === QuizQuestions[questionNumber].answer) {
         SetCorrectAnswer(correctAnswers + 1);
@@ -50,9 +53,11 @@ const QuizDisplay = () => {
         SetIncorrectAnswer(incorrectAnswers + 1);
       }
       setQuestionNumber(questionNumber + 1);
+      // setTotalTimeTaken((prev)=> prev+seconds)
       setValue("");
     } else {
       setQuestionNumber(questionNumber + 1);
+      // setTotalTimeTaken((prev)=> prev+seconds)
     }
   };
   return (
@@ -65,7 +70,8 @@ const QuizDisplay = () => {
     >
       {questionNumber < QuizQuestions.length ? (
         <>
-          <Quizbar quesNum={questionNumber} timer={seconds} />
+          {/* <Quizbar quesNum={questionNumber} timer={seconds} /> */}
+          <Quizbar quesNum={questionNumber}/>
           <Box>
             <DisplayQuestions
               question={QuizQuestions[questionNumber].question}
@@ -111,8 +117,10 @@ const QuizDisplay = () => {
         </>
       ) : (
         <div>
-          <p>Correct Answer: {correctAnswers}</p>
-          <p>Incorrect Answer: {incorrectAnswers}</p>
+          <DisplayResults totalQuestions={QuizQuestions.length} correctAnswers={correctAnswers}/>
+          {/* <p>Correct Answer: {correctAnswers}</p>
+          <p>Incorrect Answer: {incorrectAnswers}</p> */}
+          {/* <p>Total Time: {TotalTimeTaken}</p> */}
         </div>
       )}
     </Box>
