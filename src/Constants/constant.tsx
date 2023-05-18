@@ -80,39 +80,56 @@ export const QuizQuestions = [
   {
     question:
       "What is the function used to lookup a value in a table and return a corresponding value from the same row?",
-    options: { A: "MATCH", B: "INDEX", C: "HLOOKUP", D: "VLOOKUP" },
+    options: [
+      { choice: "MATCH" },
+      { choice: "INDEX" },
+      { choice: "HLOOKUP" },
+      { choice: "VLOOKUP" },
+    ],
     answer: "MATCH",
   },
   {
     question: "Which formula is NOT equivalent to all of the others?",
-    options: {
-      A: "=SUM (A3,A6)",
-      B: "=A3+A4+A5+A6",
-      C: "=SUM(A3:A6)",
-      D: "=SUM(A3,A4,A5,A6)",
-    },
+    options: [
+      { choice: "=SUM (A3,A6)" },
+      { choice: "=A3+A4+A5+A6" },
+      { choice: "=SUM(A3:A6)" },
+      { choice: "=SUM(A3,A4,A5,A6)" },
+    ],
     answer: "=A3+A4+A5+A6",
   },
   {
     question:
       "A cell contains the value 7.877 and you want it to display as 7.9. How can you accomplish this?",
-    options: {
-      A: "Click the Decrease Decimal button once",
-      B: "In the cells group on the Home tab, click Format > Format Cells. Then click the Allignment tab aand the select Right Indent.",
-      C: "Click the Decrease Decimal button twice.",
-      D: "Use the ROUND{} function",
-    },
+    options: [
+      { choice: "Click the Decrease Decimal button once" },
+      {
+        choice: "In the cells group on the Home tab, click Format > Format Cells. Then click the Allignment tab aand the select Right Indent.",
+      },
+      { choice: "Click the Decrease Decimal button twice." },
+      { choice: "Use the ROUND{} function" },
+    ],
     answer: "Click the Decrease Decimal button once",
   },
   {
     question: "Interaction of a column and row iss called __________ .",
-    options: { A: "WorkSheet", B: "Cell", C: "Ribbon", D: "Table" },
+    options: [
+      { choice: "WorkSheet" },
+      { choice: "Cell" },
+      { choice: "Ribbon" },
+      { choice: "Table" },
+    ],
     answer: "WorkSheet",
   },
   {
     question:
       "The NOW() function return the current date and time as 43704.665218. Which part of this value indicates the time?",
-    options: { A: "665218", B: "6652", C: "43740", D: "43740.66522" },
+    options: [
+      { choice: "665218" },
+      { choice: "6652" },
+      { choice: "43740" },
+      { choice: "43740.66522" },
+    ],
     answer: "665218",
   },
 ];
