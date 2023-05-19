@@ -1,39 +1,38 @@
 import React from "react";
 import AttemptScore from "./AttemptScore";
 import ScoreMessage from "./ScoreMessage";
-import { Button, Stack } from "@mui/material";
+import { Stack } from "@mui/material";
 import { QuizHeading } from "../../../Constants/constant";
+import { Link } from "react-router-dom";
+import { QuizContainer, QuizButton, QuizHeadline, ButtonBox } from "./Styling/ResultStyling";
 
 type dispResults = {
   totalQuestions: number;
   correctAnswers: number;
 };
+
 const DisplayResults: React.FC<dispResults> = (props): JSX.Element => {
   const percentage = (props.correctAnswers / props.totalQuestions) * 100;
-  console.log("toal: ", props.totalQuestions);
   return (
-    <>
-      <h2>{QuizHeading}</h2>
+    <QuizContainer>
+      <QuizHeadline>
+        {QuizHeading}
+      </QuizHeadline>
       <Stack padding={2} direction="column">
         <ScoreMessage percent={percentage} />
         <AttemptScore
           total={props.totalQuestions}
           correct={props.correctAnswers}
         />
-        <Button
-          variant="contained"
-          color="secondary"
-          sx={{
-            borderRadius: "30px",
-            margin: "20px",
-            textTransform: "capitalize",
-            padding: "3px 30px",
-          }}
-        >
-          Show Answers
-        </Button>
+        <ButtonBox>
+        <Link to="/answers" style={{ textDecoration: "none" }}>
+          <QuizButton variant="contained" color="secondary">
+            Show Answers
+          </QuizButton>
+        </Link>
+        </ButtonBox>
       </Stack>
-    </>
+    </QuizContainer>
   );
 };
 

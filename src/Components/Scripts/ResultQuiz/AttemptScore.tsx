@@ -1,5 +1,5 @@
-import { Stack } from '@mui/material';
-import React, { FC } from 'react'
+import { FC } from 'react'
+import { QuizContainer, ScoreText } from './Styling/ResultStyling';
 
 type scoring = {
   total: number;
@@ -7,10 +7,10 @@ type scoring = {
 }
 const AttemptScore: FC<scoring> = (props): JSX.Element => {
   return (
-    <Stack padding={2} direction='row'>
-      <h3>Your Score: </h3>
-      <p>{props.correct}/{props.total}</p>
-    </Stack>
+    <QuizContainer direction='row'>
+      <ScoreText variant='h6'>Your Score: </ScoreText>
+      <ScoreText>{props.correct}/{props.total}</ScoreText>
+    </QuizContainer>
   )
 }
 

@@ -32,7 +32,7 @@ export const QuizIncludesPoints = [
       alt="clock-icon"
       style={{ maxWidth: "2vw", maxHeight: "2vh", margin: "3px" }}
     />
-    10 Minutes
+    10 Seconds per Question
   </Typography>,
   <Typography>
     <img
@@ -56,7 +56,7 @@ export const QuizInteraction = [
       alt="comment-icon"
       style={{ maxWidth: "2vw", maxHeight: "2vh", margin: "3px" }}
     />
-    Leave a Comment
+    Best of Luck
   </Typography>,
   <Typography>
     <img
