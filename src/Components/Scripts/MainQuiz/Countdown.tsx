@@ -1,23 +1,23 @@
-import { Box, Button } from "@mui/material";
+import { Box } from "@mui/material";
 import { FC } from "react";
+import { ShowQuesNumSection } from "./Styling/MainQuizStyling";
+
 type TimeCountdown = {
-  timer: number;
+  sec: number;
 };
 const Countdown: FC<TimeCountdown> = (props): JSX.Element => {
-
   return (
     <Box>
-      <Button
+      <ShowQuesNumSection
         variant="contained"
         color="error"
-        sx={{
-          borderRadius: "30px",
-          textTransform: "capitalize",
-          height: "18px",
-          fontSize: "12px",
-          padding: "10px",
-        }}
-      >{props.timer}</Button>
+        disableTouchRipple
+        disableElevation
+        disableFocusRipple
+        disableRipple
+      >
+        {props.sec} sec
+      </ShowQuesNumSection>
     </Box>
   );
 };

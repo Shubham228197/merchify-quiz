@@ -1,19 +1,18 @@
 import React, { FC } from "react";
-// import Countdown from "./Countdown";
 import QuestionNumber from "./QuestionNumber";
+import Countdown from "./Countdown";
 import { Box } from "@mui/material";
 
 type Quizing = {
   quesNum: number;
-  // timer: number;
+  sec: number;
 };
 
 const Quizbar: FC<Quizing> = (props): JSX.Element => {
-  // console.log("timer i QuizBar: ",props.timer)
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex", margin: '10px 0px' }}>
       <QuestionNumber quesNum={props.quesNum} />
-      {/* <Countdown timer={props.timer}/> */}
+      <Countdown sec={props.sec}/>
     </Box>
   );
 };
