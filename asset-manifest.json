@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/merchify-quiz/static/css/main.e6c13ad2.css",
+    "main.js": "/merchify-quiz/static/js/main.40c8626e.js",
+    "static/js/787.28cb0dcd.chunk.js": "/merchify-quiz/static/js/787.28cb0dcd.chunk.js",
+    "static/media/StudentImage.png": "/merchify-quiz/static/media/StudentImage.de5018902d1ec5dcf3da.png",
+    "index.html": "/merchify-quiz/index.html",
+    "main.e6c13ad2.css.map": "/merchify-quiz/static/css/main.e6c13ad2.css.map",
+    "main.40c8626e.js.map": "/merchify-quiz/static/js/main.40c8626e.js.map",
+    "787.28cb0dcd.chunk.js.map": "/merchify-quiz/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.40c8626e.js"
+  ]
+}
