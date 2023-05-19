@@ -58,7 +58,7 @@ const QuizDisplay = () => {
     resetTimer();
   };
 
-  if(seconds > 10){
+  if(seconds > 60){
     handleQuestionNumber();
   }
 
